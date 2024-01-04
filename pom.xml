@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>jbrogers63</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>0.1.0</version>
+    <packaging>pom</packaging>
+
+    <name>Parent - JBRogers63 Java Projects</name>
+
+    <url>https://github.com/jbrogers63/parent-pom</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.plugin.archetype>3.2.1</maven.plugin.archetype>
+        <maven.plugin.clean>3.1.0</maven.plugin.clean>
+        <maven.plugin.resources>3.3.1</maven.plugin.resources>
+        <maven.plugin.install>3.1.1</maven.plugin.install>
+        <maven.plugin.deploy>3.1.1</maven.plugin.deploy>
+    </properties>
+
+    <build>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+            <plugins>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${maven.plugin.clean}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>${maven.plugin.archetype}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven.plugin.resources}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven.plugin.install}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven.plugin.deploy}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
