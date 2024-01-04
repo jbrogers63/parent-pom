@@ -19,9 +19,10 @@
         <maven.compiler.target>17</maven.compiler.target>
         <maven.plugin.archetype>3.2.1</maven.plugin.archetype>
         <maven.plugin.clean>3.1.0</maven.plugin.clean>
-        <maven.plugin.resources>3.3.1</maven.plugin.resources>
-        <maven.plugin.install>3.1.1</maven.plugin.install>
+        <maven.plugin.compiler>3.12.1</maven.plugin.compiler>
         <maven.plugin.deploy>3.1.1</maven.plugin.deploy>
+        <maven.plugin.install>3.1.1</maven.plugin.install>
+        <maven.plugin.resources>3.3.1</maven.plugin.resources>
     </properties>
 
     <build>
@@ -46,6 +47,10 @@
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven.plugin.deploy}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.plugin.compiler}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
