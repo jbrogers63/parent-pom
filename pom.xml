@@ -6,7 +6,7 @@
 
     <groupId>jbrogers63</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <packaging>pom</packaging>
 
     <name>Parent - JBRogers63 Java Projects</name>
@@ -17,13 +17,31 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <maven.plugin.archetype>3.2.1</maven.plugin.archetype>
-        <maven.plugin.clean>3.1.0</maven.plugin.clean>
-        <maven.plugin.compiler>3.12.1</maven.plugin.compiler>
-        <maven.plugin.deploy>3.1.1</maven.plugin.deploy>
-        <maven.plugin.install>3.1.1</maven.plugin.install>
+        <maven.plugin.archetype>3.4.0</maven.plugin.archetype>
+        <maven.plugin.clean>3.5.0</maven.plugin.clean>
+        <maven.plugin.compiler>3.14.0</maven.plugin.compiler>
+        <maven.plugin.deploy>3.1.4</maven.plugin.deploy>
+        <maven.plugin.install>3.1.4</maven.plugin.install>
         <maven.plugin.resources>3.3.1</maven.plugin.resources>
+        <maven.plugin.surefire>3.5.3</maven.plugin.surefire>
+        <maven.plugin.failsafe>3.5.3</maven.plugin.failsafe>
+        <junit.version>5.13.2</junit.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -43,6 +61,16 @@
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
                     <version>${maven.plugin.install}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${mave.plugin.surefire}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>${maven.plugin.failsafe}</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
